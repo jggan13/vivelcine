@@ -1,1 +1,18 @@
-<app-loading></app-loading>
+<app-loading *ngIf="loading"></app-loading>
+
+<div class="container" *ngIf="!loading">
+<div class="row">
+    <div class="card-columns m-5">
+        <div class="card" *ngFor="let item of movies">
+          <img class="card-img-top" [src]="item.urlImage | noimage" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">{{item.titulo}}</h5>
+            <p class="card-text">{{item.detalles | textocondicionado}}</p>
+            <p class="card-text">
+                <button class="btn btn-outline-primary btn-block" [routerLink]="['/movie', item.idMovie]">ver más...</button>
+            </p>
+          </div>
+        </div>
+    </div>
+</div>
+</div>
