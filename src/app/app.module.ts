@@ -10,6 +10,7 @@ import { MoviesComponent } from './components/movies/movies.component';
 import { LoadingComponent } from './components/shared/loading/loading.component';
 import { NoimagePipe } from './pipes/noimage.pipe';
 import { TextocondicionadoPipe } from './pipes/textocondicionado.pipe';
+import { PaginationComponent } from './components/shared/pagination/pagination.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { TextocondicionadoPipe } from './pipes/textocondicionado.pipe';
     MoviesComponent,
     LoadingComponent,
     NoimagePipe,
-    TextocondicionadoPipe
+    TextocondicionadoPipe,
+    PaginationComponent
   ],
   imports: [
     BrowserModule,
