@@ -11,14 +11,17 @@ export class MovieComponent implements OnInit {
 
   movie: any = {};
   loading: boolean;
+  page: number;
 
   constructor(private activatedRoute: ActivatedRoute, private movieService: MovieService) {
 
     this.loading = true;
 
+
     this.activatedRoute.params.subscribe( (params) => {
       console.log(params.id);
       this.getMovie(params.id);
+      this.page = params.page;
     })
 
    }

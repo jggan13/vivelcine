@@ -6,16 +6,16 @@ import { SearchComponent } from './components/search/search.component';
 
 
 const routes: Routes = [
-  { path: 'movies',    component: MoviesComponent  },
-  { path: 'movies/:id',    component: MoviesComponent  },
-  { path: 'movie/:id', component: MovieComponent   },
+  // { path: 'movies',    component: MoviesComponent  },
+  { path: 'movies/:page',    component: MoviesComponent  },
+  { path: 'movie/:id/:page', component: MovieComponent   },
   { path: 'search/:termino', component: SearchComponent },
   { path: '',   pathMatch: 'full', redirectTo: '/movies/1' },
   { path: '**', pathMatch: 'full', redirectTo: '/movies/1' }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, {useHash: true})],
+  imports: [RouterModule.forRoot(routes, {useHash: true, scrollPositionRestoration:'enabled'})],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

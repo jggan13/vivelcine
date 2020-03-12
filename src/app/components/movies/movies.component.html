@@ -9,7 +9,7 @@
             <h5 class="card-title">{{item.titulo}}</h5>
             <p class="card-text">{{item.detalles | textocondicionado}}</p>
             <p class="card-text">
-                <button class="btn btn-outline-primary btn-block" [routerLink]="['/movie', item.idMovie]">ver más...</button>
+                <button class="btn btn-outline-primary btn-block" [routerLink]="['/movie', item.idMovie, page]">ver más...</button>
             </p>
           </div>
         </div>

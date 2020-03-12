@@ -16,10 +16,11 @@ export class MovieService {
 
   }
 
-  getMovies = () => {
+  getMovies = (page: number) => {
 
     //movies/1
-    return this.getQuery('movies/1').pipe(map((data) => {
+    return this.getQuery(`movies/${page}`).pipe(map((data) => {
+      console.log(page);
       return data['Data'];
     }));
 
