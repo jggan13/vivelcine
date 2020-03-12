@@ -11,6 +11,9 @@ import { LoadingComponent } from './components/shared/loading/loading.component'
 import { NoimagePipe } from './pipes/noimage.pipe';
 import { TextocondicionadoPipe } from './pipes/textocondicionado.pipe';
 import { PaginationComponent } from './components/shared/pagination/pagination.component';
+import { SearchComponent } from './components/search/search.component';
+import { LoadingSpinnerComponent } from './components/shared/loading-spinner/loading-spinner.component';
+
 
 @NgModule({
   declarations: [
@@ -21,7 +24,9 @@ import { PaginationComponent } from './components/shared/pagination/pagination.c
     LoadingComponent,
     NoimagePipe,
     TextocondicionadoPipe,
-    PaginationComponent
+    PaginationComponent,
+    SearchComponent,
+    LoadingSpinnerComponent
   ],
   imports: [
     BrowserModule,

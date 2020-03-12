@@ -24,5 +24,10 @@ export class MovieService {
     }));
 
   }
+
+  getMovie = (id: number) => {
+    //movies/detail/5
+    return this.getQuery(`movies/detail/${id}`);
+  }
   
 }
