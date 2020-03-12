@@ -8,9 +8,12 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class SearchComponent implements OnInit {
 
+  termino: string;
+
   constructor(private activatedRoute: ActivatedRoute) { 
     this.activatedRoute.params.subscribe((params) => {
       console.log(params.termino);
+      this.termino = params.termino;
     });
   }
 
