@@ -13,6 +13,7 @@ import { TextocondicionadoPipe } from './pipes/textocondicionado.pipe';
 import { PaginationComponent } from './components/shared/pagination/pagination.component';
 import { SearchComponent } from './components/search/search.component';
 import { LoadingSpinnerComponent } from './components/shared/loading-spinner/loading-spinner.component';
+import { MovieCardComponent } from './components/shared/movie-card/movie-card.component';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { LoadingSpinnerComponent } from './components/shared/loading-spinner/loa
     TextocondicionadoPipe,
     PaginationComponent,
     SearchComponent,
-    LoadingSpinnerComponent
+    LoadingSpinnerComponent,
+    MovieCardComponent
   ],
   imports: [
     BrowserModule,
