@@ -11,7 +11,9 @@ export class MovieService {
 
   getQuery = (url: string) => {
 
-    const uri: string =  `https://espamidiomas.azurewebsites.net/api/${url}`;
+    //const uri: string =  `https://espamidiomas.azurewebsites.net/api/${url}`;
+    const uri: string =  `http://jganchozo01-001-site2.ctempurl.com/api/${url}`;
+    
     return this.http.get(uri);
 
   }
@@ -20,7 +22,7 @@ export class MovieService {
 
     //movies/1
     return this.getQuery(`movies/${page}`).pipe(map((data) => {
-      console.log(page);
+      //console.log(page);
       return data['Data'];
     }));
 

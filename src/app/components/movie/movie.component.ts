@@ -19,7 +19,7 @@ export class MovieComponent implements OnInit {
 
 
     this.activatedRoute.params.subscribe( (params) => {
-      console.log(params.id);
+      //console.log(params.id);
       this.getMovie(params.id);
       this.page = params.page;
     })
