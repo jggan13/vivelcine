@@ -6,7 +6,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class NoimagePipe implements PipeTransform {
 
   transform(value: string): any {
-    const url = "https://api.cmfconstructora.com.ec/images/";
+    const url = "https://espamidiomas.azurewebsites.net/images/";
     return `${url}${value}`;
   }
 
