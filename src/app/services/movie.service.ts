@@ -11,7 +11,9 @@ export class MovieService {
 
   getQuery = (url: string) => {
 
-    const uri: string =  `https://espamidiomas.azurewebsites.net/api/${url}`;
+    //https://api.cmfconstructora.com.ec/api/movies/2
+    //https://espamidiomas.azurewebsites.net/api
+    const uri: string =  `https://api.cmfconstructora.com.ec/api/${url}`;
     return this.http.get(uri);
 
   }
