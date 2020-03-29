@@ -13,7 +13,7 @@ export class MovieService {
 
     //https://api.cmfconstructora.com.ec/api/movies/2
     //https://espamidiomas.azurewebsites.net/api
-    const uri: string =  `https://api.cmfconstructora.com.ec/api/${url}`;
+    const uri: string =  `espamidiomas.azurewebsites.net/api/${url}`;
     return this.http.get(uri);
 
   }
