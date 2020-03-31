@@ -1,4 +1,4 @@
-<div class="row">
+<!-- <div class="row">
     <div class="card-columns m-5">
         <div class="card make-it-slow" *ngFor="let item of items">
           <img class="card-img-top" [src]="item.urlImage | noimage" alt="Card image cap">
@@ -7,13 +7,20 @@
             <p class="card-text">{{item.detalles | textocondicionado}}</p>
             <p class="card-text">
                 <button class="btn btn-outline-primary btn-block" [routerLink]="['/movie', item.idMovie, page]">ver más...</button>
-            </p>
-            <!-- <p class="card-text">
-              <span class="badge badge-primary m-1">Primary</span>
-              <span class="badge badge-primary m-1">Primary</span>
-          </p> -->
-            
+            </p>            
           </div>
         </div>
     </div>
+</div> -->
+
+<div class="card make-it-slow" *ngFor="let item of items">
+  <img class="card-img-top" [src]="item.urlImage | noimage" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title"><small><strong>{{item.titulo | uppercase}}</strong></small></h5>
+    <p class="card-text">{{item.detalles | textocondicionado}}</p>
+    <p class="card-text">
+      <button class="btn btn-outline-primary btn-block" [routerLink]="['/movie', item.idMovie, page]">ver más...</button>
+  </p> 
+    <!-- <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
+  </div>
 </div>

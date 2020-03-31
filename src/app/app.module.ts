@@ -14,6 +14,7 @@ import { PaginationComponent } from './components/shared/pagination/pagination.c
 import { SearchComponent } from './components/search/search.component';
 import { LoadingSpinnerComponent } from './components/shared/loading-spinner/loading-spinner.component';
 import { MovieCardComponent } from './components/shared/movie-card/movie-card.component';
+import { CardLoadingComponent } from './components/shared/card-loading/card-loading.component';
 
 
 @NgModule({
@@ -28,7 +29,8 @@ import { MovieCardComponent } from './components/shared/movie-card/movie-card.co
     PaginationComponent,
     SearchComponent,
     LoadingSpinnerComponent,
-    MovieCardComponent
+    MovieCardComponent,
+    CardLoadingComponent
   ],
   imports: [
     BrowserModule,

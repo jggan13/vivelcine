@@ -1,9 +1,20 @@
+<br>
+<div class="container">
+<div class="jumbotron mt-5">
+  <div class="container">
+    <h1 class="display-4">VIVELCINE</h1>
+    <p class="lead">PELICULAS HD LINK DIRECTO SIN MOLESTA PUBLICIDAD.</p>
+  </div>
+</div>
+</div>
+
 <app-loading *ngIf="loading"></app-loading>
 
 <div class="container" *ngIf="!loading">
 
-  <app-movie-card [items]="movies" [page]="page"></app-movie-card>
-
+  <div class="card-columns mt-5">
+    <app-movie-card [items]="movies" [page]="page"></app-movie-card>
+  </div>
 
   <div class="container mx-auto m-5" style="width: 200px;">
     <app-pagination></app-pagination>
