@@ -23,7 +23,7 @@ export class MovieService {
     //movies/1
     return this.getQuery(`movies/${page}`).pipe(map((data) => {
       //console.log(page);
-      return data['Data'];
+      return { data: data['Data'], count: data['Total']};
     }));
 
   }
