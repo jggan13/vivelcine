@@ -12,7 +12,7 @@ export class MoviesComponent implements OnInit {
 
   loading: boolean;
   movies: any[] = [];
-  page: Number;
+  page: number = 0;
   totalPages: Number;
 
   //https://espamidiomas.azurewebsites.net/images/ urlImage 
@@ -23,18 +23,27 @@ export class MoviesComponent implements OnInit {
 
     this.activatedRoute.params.subscribe((params) => {
       this.loading = true;
-
-      this.movieService.getMovies(params.page).subscribe( (data) => {
+      //console.log(params, params.length);
+      if(params.page) { 
+        this.page = params.page;
+        //console.log('con paraaquiii');
+      }else{
+        this.page = 1 
+        //console.log('si param');
+      }
+      
+      //console.log(this.page);
+      this.movieService.getMovies(this.page).subscribe( (data) => {
         //console.log(data);
 
-        if(data.data.length <= 0 ){ this.router.navigate(['/movies', 1]);}
+        if(data.data.length <= 0 ){ this.router.navigate(['/movies']);}
         this.movies = data.data;
         this.loading = false;
-        this.page = params.page;
+        //this.page = params.page;
         this.totalPages = Math.ceil((data.count / 16));
         //window.scroll(0,0);
       }, (error) => {
-        this.router.navigate(['/movies', 1]);
+        this.router.navigate(['/movies']);
       });
 
     })
@@ -45,7 +54,9 @@ export class MoviesComponent implements OnInit {
   }
 
   nextPage = () => {
-    this.page = Number(this.page) + Number(1);
+    
+    this.page = Number(this.page) + 1;
+    //console.log(this.page);
     this.router.navigate(['/movies', this.page]);
   }
 
