@@ -6,12 +6,12 @@ import { SearchComponent } from './components/search/search.component';
 
 
 const routes: Routes = [
-  // { path: 'movies',    component: MoviesComponent  },
+  { path: 'movies',    component: MoviesComponent  },
   { path: 'movies/:page',    component: MoviesComponent  },
   { path: 'movie/:id/:page', component: MovieComponent   },
   { path: 'search/:termino', component: SearchComponent },
-  { path: '',   pathMatch: 'full', redirectTo: '/movies/1' },
-  { path: '**', pathMatch: 'full', redirectTo: '/movies/1' }
+  { path: '',   pathMatch: 'full', redirectTo: 'movies' },
+  { path: '**', pathMatch: 'full', redirectTo: 'movies' }
 ];
 
 @NgModule({
