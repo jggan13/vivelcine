@@ -26,11 +26,15 @@ export class MoviesComponent implements OnInit {
 
       this.movieService.getMovies(params.page).subscribe( (data) => {
         //console.log(data);
+
+        if(data.data.length <= 0 ){ this.router.navigate(['/movies', 1]);}
         this.movies = data.data;
         this.loading = false;
         this.page = params.page;
         this.totalPages = Math.ceil((data.count / 16));
         //window.scroll(0,0);
+      }, (error) => {
+        this.router.navigate(['/movies', 1]);
       });
 
     })
