@@ -1,6 +1,6 @@
 import { Component, OnInit, SecurityContext } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
-import 'video.js';
+//import 'video.js';
 import { MovieService } from 'src/app/services/movie.service';
 import { ActivatedRoute } from '@angular/router';
 
