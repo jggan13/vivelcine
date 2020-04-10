@@ -32,7 +32,7 @@ export class VideoPlayerComponent implements OnInit {
         <meta itemprop="uploadDate" content="Mon Apr 06 2020 10:55:26 GMT-0500 (Ecuador Time)" />
        
         <div style="position:relative; overflow:hidden; padding-bottom:56.25%">
-        <iframe src="http://pornfree4all.com/digital/api/meg.php?id=${this.mediaId}" width="100%" height="100%" frameborder="0"
+        <iframe src="https://pornfree4all.com/digital/api/meg.php?id=${this.mediaId}" width="100%" height="100%" frameborder="0"
         scrolling="auto" title="La Casa De Papel 01" style="position:absolute;"
         allowfullscreen>
         </iframe>
