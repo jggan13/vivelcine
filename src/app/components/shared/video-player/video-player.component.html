@@ -1,0 +1,16 @@
+
+<div>
+    <div class="container text-center mt-3">
+        <app-loading-spinner *ngIf="loading"></app-loading-spinner>
+    </div>
+    
+<div *ngIf="!loading" class="container-fluid mt-3 mb-1" [innerHtml]="iframeSource">
+
+    <!-- <app-vjs-player [source]="video" [options]="{ autoplay: false, controls: true, sources: [{ src: '', type: 'video/mp4' }]}"></app-vjs-player> -->
+</div>
+
+<div *ngIf="!loading" class="container row mt-5 mb-5">
+    <div class="col"><strong> {{movie.titulo | uppercase}} </strong></div>
+</div>
+
+</div>

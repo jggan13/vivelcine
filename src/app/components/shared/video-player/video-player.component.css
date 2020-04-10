@@ -1,0 +1,8 @@
+.main-player-page{
+    background-color: black;
+}
+
+.embed-responsive::before {
+    display: flex;
+    content: "";
+}
