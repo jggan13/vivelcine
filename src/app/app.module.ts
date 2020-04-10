@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -15,6 +16,8 @@ import { SearchComponent } from './components/search/search.component';
 import { LoadingSpinnerComponent } from './components/shared/loading-spinner/loading-spinner.component';
 import { MovieCardComponent } from './components/shared/movie-card/movie-card.component';
 import { CardLoadingComponent } from './components/shared/card-loading/card-loading.component';
+import { VideoPlayerComponent } from './components/shared/video-player/video-player.component';
+//import { VjsPlayerComponent } from './components/shared/app-vjs-player/app-vjs-player.component';
 
 
 @NgModule({
@@ -30,12 +33,15 @@ import { CardLoadingComponent } from './components/shared/card-loading/card-load
     SearchComponent,
     LoadingSpinnerComponent,
     MovieCardComponent,
-    CardLoadingComponent
+    CardLoadingComponent,
+    VideoPlayerComponent,
+    //VjsPlayerComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    NgxPaginationModule
   ],
   providers: [],
   bootstrap: [AppComponent]
