@@ -1,15 +1,15 @@
 
-<div>
-    <div class="container text-center mt-3">
+<div class="container">
+    <div class="text-center mt-3">
         <app-loading-spinner *ngIf="loading"></app-loading-spinner>
     </div>
     
-<div *ngIf="!loading" class="container-fluid mt-3 mb-1 animated fadeIn slow" [innerHtml]="iframeSource">
+<div *ngIf="!loading" class="container mt-3 mb-1 animated fadeIn slow main-player-page" [innerHtml]="iframeSource">
 
     <!-- <app-vjs-player [source]="video" [options]="{ autoplay: false, controls: true, sources: [{ src: '', type: 'video/mp4' }]}"></app-vjs-player> -->
 </div>
 
-<div *ngIf="!loading" class="container row mt-5 mb-5">
+<div *ngIf="!loading" class="row mt-5 mb-5">
     <div class="col-md-10"><strong> {{movie.titulo | uppercase}} </strong></div>
     <div class="col-md-2">
         <button class="btn btn-outline-danger btn-block push" [routerLink]="['/movies']">Regresar</button>
