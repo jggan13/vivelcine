@@ -19,16 +19,15 @@ export class VideoPlayerComponent implements OnInit {
   video: string;
   constructor(private dom: DomSanitizer, private movieService: MovieService, private activatedRoute: ActivatedRoute) { 
 
-    
+    this.loading = true;
     this.activatedRoute.params.subscribe((params) => {
       this.movieService.getMovie(params.id).subscribe(data => {
+        
         //console.log(data);
         this.movie = data;
-        this.loading = false;
         this.mediaId = data['idVideo'];
         //console.log(this.mediaId);
 
-        this.loading = true;
        
         this.iframeSource = this.dom.bypassSecurityTrustHtml(`
         <meta itemprop="uploadDate" content="Mon Apr 06 2020 10:55:26 GMT-0500 (Ecuador Time)" />
@@ -40,7 +39,7 @@ export class VideoPlayerComponent implements OnInit {
         </iframe>
         </div>
         `);
-
+        this.loading = false;
       });
     });
   }
