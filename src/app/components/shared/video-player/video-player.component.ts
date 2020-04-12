@@ -40,15 +40,14 @@ export class VideoPlayerComponent implements OnInit {
         </div>
         `);
 
-       setTimeout(() => {
-        this.loading = false;
-       }, 1500);
+        
 
       });
     });
   }
 
   ngOnInit(): void {
+    this.loading = false;
   }
 
 }
