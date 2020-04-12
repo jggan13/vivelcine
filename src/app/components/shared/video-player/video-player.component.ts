@@ -39,7 +39,11 @@ export class VideoPlayerComponent implements OnInit {
         </iframe>
         </div>
         `);
-        this.loading = false;
+
+        if(this.iframeSource){
+          this.loading = false;
+        }
+
       });
     });
   }
