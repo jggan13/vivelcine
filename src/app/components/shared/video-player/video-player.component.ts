@@ -1,4 +1,4 @@
-import { Component, OnInit, SecurityContext } from '@angular/core';
+import { Component, OnInit, SecurityContext, AfterViewInit } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 //import 'video.js';
 import { MovieService } from 'src/app/services/movie.service';
@@ -9,7 +9,7 @@ import { ActivatedRoute } from '@angular/router';
   templateUrl: './video-player.component.html',
   styleUrls: ['./video-player.component.css']
 })
-export class VideoPlayerComponent implements OnInit {
+export class VideoPlayerComponent implements OnInit, AfterViewInit {
 
   movie: any = {} ;
   loading: boolean = true;
@@ -47,6 +47,10 @@ export class VideoPlayerComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    
+  }
+
+  ngAfterViewInit(){
     this.loading = false;
   }
 
