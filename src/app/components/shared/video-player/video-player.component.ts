@@ -19,7 +19,7 @@ export class VideoPlayerComponent implements OnInit {
   video: string;
   constructor(private dom: DomSanitizer, private movieService: MovieService, private activatedRoute: ActivatedRoute) { 
 
-    this.loading = true;
+    
     this.activatedRoute.params.subscribe((params) => {
       this.movieService.getMovie(params.id).subscribe(data => {
         console.log(data);
@@ -39,6 +39,7 @@ export class VideoPlayerComponent implements OnInit {
         </div>
         `);
 
+        this.loading = true;
       });
     });
   }
