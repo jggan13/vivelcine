@@ -40,9 +40,9 @@ export class VideoPlayerComponent implements OnInit {
         </div>
         `);
 
-        if(this.iframeSource){
-          this.loading = false;
-        }
+       setTimeout(() => {
+        this.loading = false;
+       }, 1500);
 
       });
     });
