@@ -1,10 +1,10 @@
 
-<div class="container">
+<div class="container-fluid">
     <div class="text-center mt-3">
         <app-loading-spinner *ngIf="loading"></app-loading-spinner>
     </div>
     
-<div *ngIf="!loading" class="container mt-3 mb-1 animated fadeIn slow main-player-page" [innerHtml]="iframeSource">
+<div *ngIf="!loading" class="container-fluid mt-3 mb-1 animated fadeIn slow main-player-page" [innerHtml]="iframeSource">
 
     <!-- <app-vjs-player [source]="video" [options]="{ autoplay: false, controls: true, sources: [{ src: '', type: 'video/mp4' }]}"></app-vjs-player> -->
 </div>
