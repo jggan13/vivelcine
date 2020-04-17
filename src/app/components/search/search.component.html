@@ -3,6 +3,11 @@
     <div class="row col-12 mt-5">
         <p>Resultados para: {{ termino }}</p>
     </div>
-
-    <h1>En construcción</h1>
+    <app-loading *ngIf="loading"></app-loading>
+   
+    <div class="container" *ngIf="!loading">
+        <div class="card-columns mt-5">
+            <app-movie-card [items]="movies" [page]="page"></app-movie-card>
+        </div>
+    </div>
 </div>

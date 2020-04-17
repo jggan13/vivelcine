@@ -32,5 +32,10 @@ export class MovieService {
     //movies/detail/5
     return this.getQuery(`movies/detail/${id}`);
   }
+
+  searchMovie = (termino: string) => {
+    //https://espamidiomas.azurewebsites.net/api/movies/Search/jef
+    return this.getQuery(`movies/Search/${termino}`);
+  }
   
 }
