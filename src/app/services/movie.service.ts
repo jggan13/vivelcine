@@ -33,6 +33,11 @@ export class MovieService {
     return this.getQuery(`movies/detail/${id}`);
   }
 
+  getMovieUrl = (id: number) => {
+    //movies/detail/5
+    return this.getQuery(`movies/detailValidUrl/${id}`);
+  }
+
   searchMovie = (termino: string) => {
     //https://espamidiomas.azurewebsites.net/api/movies/Search/jef
     return this.getQuery(`movies/Search/${termino}`);

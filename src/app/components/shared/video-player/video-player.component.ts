@@ -1,6 +1,6 @@
 import { Component, OnInit, SecurityContext, AfterViewInit } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
-//import 'video.js';
+import 'video.js';
 import { MovieService } from 'src/app/services/movie.service';
 import { ActivatedRoute } from '@angular/router';
 
@@ -21,14 +21,14 @@ export class VideoPlayerComponent implements OnInit, AfterViewInit {
 
     this.loading = true;
     this.activatedRoute.params.subscribe((params) => {
-      this.movieService.getMovie(params.id).subscribe(data => {
+      this.movieService.getMovieUrl(params.id).subscribe(data => {
         
         //console.log(data);
         this.movie = data;
         this.mediaId = data['idVideo'];
         //console.log(this.mediaId);
 
-       
+       //this.video ='https://pornfree4allplayer.b-cdn.net/The-gentlemen/The.gentlemen.2020.1080p-dual-lat-www.vivelcine.com.mp4';
         this.iframeSource = this.dom.bypassSecurityTrustHtml(`
         <meta itemprop="uploadDate" content="Mon Apr 06 2020 10:55:26 GMT-0500 (Ecuador Time)" />
        
@@ -39,8 +39,6 @@ export class VideoPlayerComponent implements OnInit, AfterViewInit {
         </iframe>
         </div>
         `);
-
-        
 
       });
     });
