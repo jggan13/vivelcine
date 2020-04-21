@@ -11,18 +11,19 @@
 
 <div class="container" *ngIf="!loading">
 
-  <div class="card-columns mt-5">
+  <div class="card-columns m-5">
     <app-movie-card [items]="movies" [page]="page"></app-movie-card>
   </div>
 
-  <div class="container mx-auto m-5" style="width: 200px;">
-    <!-- <app-pagination></app-pagination> -->
-    <div class="row">
-      <button [disabled]="page <= 1" class="btn btn-primary m-1" (click)="previousPage()">Anterior</button>
-      <button [disabled]="page >= totalPages" class="btn btn-primary m-1" (click)="nextPage()">Siguiente</button>
-    </div>
+  <div class="container">
+   
+   
+      <app-pagination [PaginaActual]="page" [RegistrosPorPagina]="16" [cantidadPaginas]="totalPages"></app-pagination>
+      <!-- <button [disabled]="page <= 1" class="btn btn-primary m-1" (click)="previousPage()">Anterior</button>
+      <button [disabled]="page >= totalPages" class="btn btn-primary m-1" (click)="nextPage()">Siguiente</button> -->
+    
   </div>
-
+<br>
 </div>
 
 
