@@ -49,7 +49,7 @@ export class PaginationComponent implements OnInit {
     for (let index = this.Inicial ; index <= this.Final; index++) {
       this.pages.push(index);
     }
-    console.log(this.pages);
+    // console.log(this.pages);
     
     // this.pages.forEach(element => {
     //   console.log(element);
