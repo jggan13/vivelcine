@@ -1,13 +1,13 @@
 <div>
     <ul class="pagination justify-content-center mt-5 mb-5">
       <li class="page-item">
-        <a class="page-link" [routerLink]="['/movies', 1]">Primera</a>
+        <a class="page-link" [routerLink]="['/movies', 1]">First</a>
       </li>
       <li *ngFor="let item of pages; let i = index" class="page-item" [routerLinkActive]="['active']">
         <a class="page-link" [routerLink]="['/movies', item]">{{item}}</a>
       </li>
       <li class="page-item">
-        <a class="page-link" [routerLink]="['/movies', cantidadPaginas]">Ultima</a>
+        <a class="page-link" [routerLink]="['/movies', cantidadPaginas]">Last</a>
       </li>
     </ul>
 </div>
