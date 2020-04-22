@@ -18,7 +18,7 @@ import { LoadingSpinnerComponent } from './components/shared/loading-spinner/loa
 import { MovieCardComponent } from './components/shared/movie-card/movie-card.component';
 import { CardLoadingComponent } from './components/shared/card-loading/card-loading.component';
 import { VideoPlayerComponent } from './components/shared/video-player/video-player.component';
-import { VjsPlayerComponent } from './components/shared/app-vjs-player/app-vjs-player.component';
+//import { VjsPlayerComponent } from './components/shared/app-vjs-player/app-vjs-player.component';
 import { RegistroComponent } from './components/registro/registro.component';
 import { LoginComponent } from './components/login/login.component';
 
@@ -38,7 +38,7 @@ import { LoginComponent } from './components/login/login.component';
     MovieCardComponent,
     CardLoadingComponent,
     VideoPlayerComponent,
-    VjsPlayerComponent,
+    //VjsPlayerComponent,
     RegistroComponent,
     LoginComponent
   ],
