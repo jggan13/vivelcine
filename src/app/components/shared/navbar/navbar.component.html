@@ -26,7 +26,7 @@
         <li class="nav-item" *ngIf="authService.userToken" [routerLinkActive]="['active']">
           <a class="nav-link" [routerLink]="">{{authService.userEmail}}<span class="sr-only"></span></a>
         </li>
-        <button (click)="logout()" *ngIf="authService.userToken" class="btn btn-outline-primary my-2 my-sm-0" type="submit">Salir</button>
+        <button (click)="logout()" *ngIf="authService.userToken" class="btn btn-outline-danger my-2 my-sm-0" type="submit">Salir</button>
       </div>
     </div>
   </nav>
