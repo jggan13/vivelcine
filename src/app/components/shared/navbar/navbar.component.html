@@ -21,7 +21,12 @@
       </ul>
       <div class="form-inline my-2 my-lg-0">
         <input class="form-control mr-sm-2" type="text" #termino (keyup.enter)="searchMovie(termino.value)" placeholder="Buscar Película">
-        <button (click)="searchMovie(termino.value)" class="btn btn-outline-primary my-2 my-sm-0" type="submit">Buscar</button>
+        <button (click)="searchMovie(termino.value)" class="btn btn-outline-primary my-2 my-sm-0 mr-1" type="submit">Buscar</button>
+
+        <li class="nav-item" *ngIf="authService.userToken" [routerLinkActive]="['active']">
+          <a class="nav-link" [routerLink]="">{{authService.userEmail}}<span class="sr-only"></span></a>
+        </li>
+        <button (click)="logout()" *ngIf="authService.userToken" class="btn btn-outline-primary my-2 my-sm-0" type="submit">Salir</button>
       </div>
     </div>
   </nav>

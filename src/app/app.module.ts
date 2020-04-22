@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule, FormsModule} from '@angular/forms';
 //import { NgxPaginationModule } from 'ngx-pagination';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -17,7 +18,9 @@ import { LoadingSpinnerComponent } from './components/shared/loading-spinner/loa
 import { MovieCardComponent } from './components/shared/movie-card/movie-card.component';
 import { CardLoadingComponent } from './components/shared/card-loading/card-loading.component';
 import { VideoPlayerComponent } from './components/shared/video-player/video-player.component';
-//import { VjsPlayerComponent } from './components/shared/app-vjs-player/app-vjs-player.component';
+import { VjsPlayerComponent } from './components/shared/app-vjs-player/app-vjs-player.component';
+import { RegistroComponent } from './components/registro/registro.component';
+import { LoginComponent } from './components/login/login.component';
 
 
 @NgModule({
@@ -35,12 +38,16 @@ import { VideoPlayerComponent } from './components/shared/video-player/video-pla
     MovieCardComponent,
     CardLoadingComponent,
     VideoPlayerComponent,
-    //VjsPlayerComponent
+    VjsPlayerComponent,
+    RegistroComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    ReactiveFormsModule,
+    FormsModule
     //NgxPaginationModule
   ],
   providers: [],
