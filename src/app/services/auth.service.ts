@@ -99,6 +99,7 @@ export class AuthService {
     if(expiraDate > new Date()){
       return true;
     }else{
+      this.logout();
       return false;
     }
 
