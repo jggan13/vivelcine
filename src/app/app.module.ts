@@ -21,6 +21,10 @@ import { VideoPlayerComponent } from './components/shared/video-player/video-pla
 //import { VjsPlayerComponent } from './components/shared/app-vjs-player/app-vjs-player.component';
 import { RegistroComponent } from './components/registro/registro.component';
 import { LoginComponent } from './components/login/login.component';
+import { OnlineChannelsComponent } from './components/online-channels/online-channels.component';
+import { ChannelComponent } from './components/channel/channel.component';
+import { ChannelCardComponent } from './components/shared/channel-card/channel-card.component';
+import { ChannelPlayerComponent } from './components/shared/channel-player/channel-player.component';
 
 
 @NgModule({
@@ -40,7 +44,11 @@ import { LoginComponent } from './components/login/login.component';
     VideoPlayerComponent,
     //VjsPlayerComponent,
     RegistroComponent,
-    LoginComponent
+    LoginComponent,
+    OnlineChannelsComponent,
+    ChannelComponent,
+    ChannelCardComponent,
+    ChannelPlayerComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,10 @@
+<div class="card make-it-slow" *ngFor="let item of items">
+    <img class="card-img-top" [src]="item.poster_path | noimage" alt="Card image cap">
+    <div class="card-body">
+        <h5 class="card-title"><small><strong>{{item.titulo | uppercase}}</strong></small></h5>
+        <p class="card-text">
+            <button class="btn btn-outline-primary btn-block" [routerLink]="['/channel-player', item._id]">Ver
+                Online</button>
+        </p>
+    </div>
+</div>

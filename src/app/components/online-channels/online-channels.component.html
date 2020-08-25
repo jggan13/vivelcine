@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="jumbotron mt-3">
+      <div class="container">
+        <h1 class="display-4">VIVELCINE</h1>
+        <p class="lead">CANALES ONLINE</p>
+      </div>
+    </div>
+    </div>
+    
+    <app-loading *ngIf="loading"></app-loading>
+    
+    <div class="container" *ngIf="!loading">
+    
+      <div class="card-columns mt-5">
+        <app-channel-card [items]="channels" [page]="page"></app-channel-card>
+      </div>
+    
+      <div class="container">
+        
+      </div>
+    <br>
+    </div>
+    
