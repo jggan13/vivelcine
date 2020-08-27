@@ -14,9 +14,12 @@ export class OnlineChannelsComponent implements OnInit {
   totalPages: Number;
 
   constructor(private channelsService: ChannelsService) { 
+    this.loading = true;
     channelsService.getMovies(0).subscribe((channels: any) => {
+      this.loading = true;
       this.channels = channels;
       console.log(this.channels);
+      this.loading = false;
     });
   }
 
